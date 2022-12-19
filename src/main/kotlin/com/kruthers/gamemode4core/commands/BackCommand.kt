@@ -25,7 +25,7 @@ class BackCommand(val plugin: Gamemode4Core) {
         }
 
         if (locations == null || locations.isEmpty()) {
-            player.sendMessage("<prefix> <red>You have no where to return too")
+            player.sendMessage(parseString("<prefix> <red>You have no where to return to",plugin))
         } else {
             //get the location to return to
             val location: Location = if (count > locations.size) {
